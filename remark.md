@@ -1,8 +1,6 @@
-###Welcome to use MarkDown
-
 # 模仿vue-cli搭建自己的脚手架
 
-1. 创建文件夹testcli，使用命令行工具进入到testcli文件夹下面
+1. 创建文件夹lhh-cli，使用命令行工具进入到lhh-cli文件夹下面
 
 2. 初始化项目 ,命令行输入npm init，一路回车，遇到repository提示的时候填写自己的github账号，这时候package.json文件初始化完成
 
@@ -207,4 +205,13 @@
 
 2. npm官网注册一个账号，同时搜索一下lhh-cli有没有人用过
 
-3. 
+3. 终端进入lhh-cli目录下输入npm login,输入用户名、密码、邮箱去登录（密码输入不了，按回车跳过）
+
+4. 登录完成后，输入npm publish,将脚手架发布到npm上面去，发布完成后在npm官网上可以收到lhh-cli这个脚手架
+
+5. 尝试使用自己的脚手架：首先我们要解绑一下 npm unlink,不然会影响我们等下要下载的脚手架。重新打开一个终端，	输入npm install lhh-cli -g全局安装脚手架，然后执行lhh,如果出现如下就说明安装成功
+![avatar](./img/2.png)
+
+6. 使用脚手架：lhh list查看可下载的模板,lhh init first-cli demo,使用first-cli模板，创建的项目名称为demo,用法跟vue-cli一样。
+
+
