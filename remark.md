@@ -6,24 +6,24 @@
 
 2. 初始化项目 ,命令行输入npm init，一路回车，遇到repository提示的时候填写自己的github账号，这时候package.json文件初始化完成
 
-3. 在根目录下创建bin文件夹，bin文件夹里面创建分别创建没有后缀名的文件：cao、cao-add、cao-delete、cao-list、cao-init。向文件里面添加如下代码：
+3. 在根目录下创建bin文件夹，bin文件夹里面创建分别创建没有后缀名的文件：lhh、lhh-add、lhh-delete、lhh-list、lhh-init。向文件里面添加如下代码：
 ```
 	#!/usr/bin/env node
 	console.log('test-cli')
 ```
-这时候在命令号输入：node ./bin/cao,就会打印出来test-cli。但是这样很麻烦，为了方便简洁，我们直接在package.json文件里面配置简洁命令。
+这时候在命令号输入：node ./bin/lhh,就会打印出来test-cli。但是这样很麻烦，为了方便简洁，我们直接在package.json文件里面配置简洁命令。
 
 4. package.josn文件添加如下
 ```json
 	"bin": {
-	    "cao": "bin/cao",
-	    "cao-add": "bin/cao-add",
-	    "cao-delete": "bin/cao-delete",
-	    "cao-list": "bin/cao-list",
-	    "cao-init": "bin/cao-init"
+	    "lhh": "bin/lhh",
+	    "lhh-add": "bin/lhh-add",
+	    "lhh-delete": "bin/lhh-delete",
+	    "lhh-list": "bin/lhh-list",
+	    "lhh-init": "bin/lhh-init"
 	},
  ```
-然后在命令行输入：npm link。将bin里面的命令绑定到终端里面，这时候在命令行输入cao就可以打印出test-cli。
+然后在命令行输入：npm link。将bin里面的命令绑定到终端里面，这时候在命令行输入lhh就可以打印出test-cli。
 
 5. 创建template.json文件，用来存放模板的名称和信息，这里我默认存放自己github上面的一个项目，当使用脚手架的时候就可以下载，类似vue-cli构建项目一样。
 
@@ -39,9 +39,9 @@
 ```
 > 下面开始写指令了
 
-7. cao-add指令，使用该指令是将模板添加到下载列表，当我们使用coa-init时就可以选择下载那个模板。(vue-cli脚手架是没有添加功能的，这里是为了模拟测试。)使用cao-add指令的时候，模板名称可以自己定义，模板地址就是用github上面的项目地址,只要写红框框住的即可
-![avatar](/img/1.png)
-将一下代码添加到cao-add文件里面
+7. lhh-add指令，使用该指令是将模板添加到下载列表，当我们使用coa-init时就可以选择下载那个模板。(vue-cli脚手架是没有添加功能的，这里是为了模拟测试。)使用lhh-add指令的时候，模板名称可以自己定义，模板地址就是用github上面的项目地址,只要写红框框住的即可
+![avatar](./img/1.png)
+将一下代码添加到lhh-add文件里面
 ```
 	#!/usr/bin/env node
 	 
@@ -98,7 +98,7 @@
 	 })
 	})
 ```
-8. cao-delete指令，将已经添加的模板删除。(vue-cli脚手架是没有删除功能的，这里只是为了模拟测试。)将一下代码添加到cao-delete文件里面
+8. lhh-delete指令，将已经添加的模板删除。(vue-cli脚手架是没有删除功能的，这里只是为了模拟测试。)将一下代码添加到lhh-delete文件里面
 
 ```
 	#!/usr/bin/env node
@@ -139,7 +139,7 @@
 	 })
 	})
 ```
-9. cao-list指令，该指令可以查看脚手架可下载的模板。将一下代码添加到cao-list文件
+9. lhh-list指令，该指令可以查看脚手架可下载的模板。将一下代码添加到lhh-list文件
 
 ```
 	#!/usr/bin/env node
@@ -147,7 +147,7 @@
 	const tplObj = require(`${__dirname}/../template`)
 	console.log(tplObj)
 ```
-10. cao-init指令，下载模板核心指令，cao cao-init <templateName> <projectName>,(就像vue init webpack myproject) 将一下代码添加到cao-init文件
+10. lhh-init指令，下载模板核心指令，lhh lhh-init <templateName> <projectName>,(就像vue init webpack myproject) 将一下代码添加到lhh-init文件
 
 ```
 	#!/usr/bin/env node
@@ -205,6 +205,6 @@
 
 1. 根目录下创建.npmignore文件，并写入/node_modules,发布的时候忽略node_modules文件
 
-2. npm官网注册一个账号，同时搜索一下cao-cli有没有人用过
+2. npm官网注册一个账号，同时搜索一下lhh-cli有没有人用过
 
 3. 
